@@ -1,13 +1,24 @@
 @import 'normalize.css';
 
 :root {
-    --primary: #fe2c55
+    --primary: #fe2c55;
+
+    // Default layout
+    --default-layout-width: 1150px;
+    --default-layout-header-height: 60px;
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     line-height: 1.5;
+}
+
+button, input, [tabindex] {
+    outline: none;
+    border: none;
 }

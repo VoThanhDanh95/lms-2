@@ -10,6 +10,7 @@ const routes = [
     {
         path: '/',
         exact: true,
+        layout: UserLayout,
         component: Home
     },
     {
