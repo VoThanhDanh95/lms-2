@@ -17,6 +17,7 @@
     align-items: center;
     height: 100%;
     width: var(--default-layout-width);
+    padding: 0px var(--default-layout-horizontal-spacer);
 }
 
 
@@ -91,4 +92,11 @@
         background-color: rgba(22, 24, 35, 0.12);
     }
 
+}
+
+.more-btn {
+    font-size: 1.4rem;
+    margin-left: 20px;
+    padding: 4px 8px;
+    background-color: transparent;
 }

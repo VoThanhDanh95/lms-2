@@ -35,7 +35,6 @@ function renderRoutes() {
                     const Comp = ele.component
                     const path = ele.path
                     let Layout = ele.layout == null ? Fragment : ele.layout
-                    console.log('Layout ', Layout)
                     return (
                         <Route
                             key={idx}
