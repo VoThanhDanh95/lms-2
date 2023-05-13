@@ -1,9 +1,7 @@
 import Header from "./Header/Header";
-import Sidebar from "./SideBar/Sidebar";
-import styles from './UserLayout.module.scss'
+import styles from './ExerciseLayout.module.scss'
 
-
-function UserLayout({ children }) {
+function ExerciseLayout({ children }) {
     return (
         <div className={styles['wrapper']}>
             <Header />
@@ -17,4 +15,4 @@ function UserLayout({ children }) {
     )
 }
 
-export default UserLayout
+export default ExerciseLayout

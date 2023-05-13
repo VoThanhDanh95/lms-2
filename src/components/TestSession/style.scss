@@ -1,0 +1,84 @@
+.test-wrapper {
+    height: calc(100vh - var(--default-layout-header-height));
+    max-height: calc(100vh - var(--default-layout-header-height));
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f8f9fa;
+    border: 2px solid red;
+    padding: 12px;
+
+    .test-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .passage-selection {
+        display: flex;
+    }
+    .test-body {
+        display: flex;
+        flex: 1;
+        overflow-y: scroll;
+
+        .content-wrapper {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 0.45rem;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 0 0 rgba(143, 156, 173, 0.2);
+            flex: 1;
+            max-height: 100%;
+            overflow-y: scroll;
+        }
+
+        // height: calc(100% - var(--default-layout-header-height));
+        .tracking-wrapper {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 0.45rem;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 0 0 rgba(143, 156, 173, 0.2);
+            min-width: 200px;
+            width: 200px;
+
+            .passage-answer {
+                .list-answer {
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    margin-bottom: 10px;
+
+                    .answer-item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 3px;
+                        border-color: #f7faff;
+                        border: 1px solid;
+                        font-weight: 600;
+                        font-size: 12px;
+
+                        -webkit-user-select: none; /* Safari */
+                        -ms-user-select: none; /* IE 10 and IE 11 */
+                        user-select: none; /* Standard syntax */
+                        cursor: pointer;
+
+                        &:hover,
+                        &.active {
+                            background-color: #35509a;
+                            color: #fff;
+                            border-color: #35509a;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

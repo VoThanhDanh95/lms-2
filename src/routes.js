@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./pages/Home";
 import TestCollection from "./pages/TestCollection";
 import Profile from "./pages/Profile";
+import Session from "./pages/Session/Session";
 import UserLayout from "./components/Layout/UserLayout"
 import HeaderLayout from "./components/Layout/HeaderLayout";
 import { Fragment } from "react";
@@ -25,6 +26,12 @@ const routes = [
         layout: HeaderLayout,
         component: Profile
     },
+    {
+        path: '/session',
+        exact: true,
+        layout: HeaderLayout,
+        component: Session
+    }
 ]
 
 function renderRoutes() {
