@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
 
-    background-color: #f8f9fa;
+    background-color: var(--body-background-color);
     border: 2px solid red;
     padding: 12px;
 
@@ -32,6 +32,29 @@
             flex: 1;
             max-height: 100%;
             overflow-y: scroll;
+            display: flex;
+
+            .passage-area {
+                flex: 1;
+                overflow-y: scroll;
+            }
+
+            .passage-answer {
+                flex: 1;
+                .session-question-wrapper {
+                    .question-content {
+                        .jodit-container {
+                            border: none;
+                            background-color: transparent;
+                        }
+
+                        // .jodit-container:not(.jodit_inline) {
+                        //     /* Quy tắc CSS áp dụng cho các phần tử có lớp jodit-container nhưng không có lớp jodit_inline */
+                        //     /* ... */
+                        // }
+                    }
+                }
+            }
         }
 
         // height: calc(100% - var(--default-layout-header-height));

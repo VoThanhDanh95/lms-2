@@ -1,4 +1,4 @@
-import TestSession from '../../components/TestSession/TestSession'
+import TestSession from '../components/TestSession/TestSession'
 
 function Session() {
     return (

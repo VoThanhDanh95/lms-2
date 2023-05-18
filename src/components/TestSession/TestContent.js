@@ -1,18 +1,22 @@
-// import styles from './TestSession.module.scss'
-import { useState } from "react"
-import { TextField } from '@mui/material';
-// import Grid from "@mui/material/Grid";
+import './style.scss'
+import JoditExample from "../JoditExample"
+import AnswerForm from './AnswerForm'
 
 function TestContent({ itemsRef, passage_content, passage_input }) {
     return (
         <div className="content-wrapper">
-            
+
             <div className="passage-area">
-                {passage_content}
+                <JoditExample
+                    init_value={passage_content}
+                    custom_config={{ readonly: true, toolbar: false }}
+                />
             </div>
 
             <div className="passage-answer">
-                <ul>
+                <AnswerForm list_question = {passage_input}/>
+
+                {/* <ul>
                     {passage_input.map((answerBox, index) => (
                         <li key={index}
                             ref={(node) => {
@@ -27,7 +31,7 @@ function TestContent({ itemsRef, passage_content, passage_input }) {
                             <input style={{ border: '2px solid black' }} />
                         </li>
                     ))}
-                </ul>
+                </ul> */}
             </div>
         </div>
     )

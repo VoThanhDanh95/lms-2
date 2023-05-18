@@ -28,11 +28,9 @@ function Button({ to,
     if (to) {
         props.to = to
         Comp = Link
-        console.log('to')
     } else if (href) {
         props.href = href
         Comp = 'a'
-        console.log('href')
     }
 
     const classes = cx('wrapper', {

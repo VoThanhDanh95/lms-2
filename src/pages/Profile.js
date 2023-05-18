@@ -1,12 +1,9 @@
 import React from 'react'
-import useCountDown from '../hooks/countDown'
+import QuestionForm from '../components/GoogleForm/QuestionForm'
 
 function Profile() {
-    const remainingTime = useCountDown()
     return (
-        <h1>
-            Profile Page {remainingTime}
-        </h1>
+        <QuestionForm />
     )
 }
 

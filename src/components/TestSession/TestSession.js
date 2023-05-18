@@ -4,93 +4,33 @@ import TestTracking from "./TestTracking"
 import './style.scss'
 import { useState, useRef } from 'react'
 import Button from "../Button/Button"
+import { SECTION_LIST } from '../GoogleForm/fakeData'
 
 function TestSession() {
     const itemsRef = useRef(new Map());
+    const [answerMap, setAnswerMap] = useState({})
+
     const [selectedPassage, setSelectedPassage] = useState(0)
-    const session_input = [
-        {
-            "content": "This is test paragraph 1",
-            "list_input": [
-                {
-                    "id": 1,
-                    "type": "text",
-                },
-                {
-                    "id": 2,
-                    "type": "text",
-                },
-                {
-                    "id": 3,
-                    "type": "text",
-                },
-
-            ]
-        },
-        {
-            "content": "This is test paragraph 2",
-            "list_input": [
-                {
-                    "id": 4,
-                    "type": "text",
-                },
-                {
-                    "id": 5,
-                    "type": "text",
-                },
-                {
-                    "id": 6,
-                    "type": "text",
-                },
-                {
-                    "id": 7,
-                    "type": "text",
-                },
-
-            ]
-        },
-        {
-            "content": "This is test paragraph 3",
-            "list_input": [
-                {
-                    "id": 8,
-                    "type": "text",
-                },
-                {
-                    "id": 9,
-                    "type": "text",
-                },
-                {
-                    "id": 10,
-                    "type": "text",
-                },
-                {
-                    "id": 11,
-                    "type": "text",
-                },
-                {
-                    "id": 12,
-                    "type": "text",
-                },
-
-            ]
-        },
-    ]
-    const passage_content = session_input[selectedPassage]["content"]
-    const passage_input = session_input[selectedPassage]["list_input"]
-
-    let all_input = [];
-    session_input.map((ele, idx) => {
-        ele['list_input'].map((input, _) => {
-            all_input.push({
-                ...input,
-                page: idx
-            })
+    const passage_content = SECTION_LIST[selectedPassage]["content"]
+    const passage_input = SECTION_LIST[selectedPassage]["question-list"]
+    let all_question = [];
+    SECTION_LIST.map((ele, idx) => {
+        let count_q = 0
+        ele['question-list'].map((input, _) => {
+            count_q += 1
+            if (input["questionType"] == "checkbox") {
+                for (let i=0; i<input["questionType"]; i++) {
+                    
+                }
+                all_question.push({
+                    ...input,
+                    passage_id: idx,
+                    qid: count_q
+                })
+            }
         })
-        // all_input = all_input.concat(...[ele['list_input'], 'page': idx])
     })
 
-    console.log('all_input ', all_input)
 
     return (
         <div className='test-wrapper'>
@@ -112,11 +52,10 @@ function TestSession() {
             <div className="test-body">
                 <TestContent 
                     itemsRef={itemsRef}
-                    // all_input={all_input}
                     passage_content={passage_content}
                     passage_input={passage_input}
                     />
-                <TestTracking itemsRef={itemsRef} all_input={all_input} selectedPassage={selectedPassage} setSelectedPassage={setSelectedPassage}/>
+                <TestTracking itemsRef={itemsRef} all_question={all_question} selectedPassage={selectedPassage} setSelectedPassage={setSelectedPassage}/>
             </div>
 
             <div className="test-footer">

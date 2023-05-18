@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./pages/Home";
 import TestCollection from "./pages/TestCollection";
 import Profile from "./pages/Profile";
-import Session from "./pages/Session/Session";
+import Session from "./pages/Session";
 import UserLayout from "./components/Layout/UserLayout"
 import HeaderLayout from "./components/Layout/HeaderLayout";
 import { Fragment } from "react";

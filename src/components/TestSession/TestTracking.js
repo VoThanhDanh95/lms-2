@@ -27,6 +27,8 @@ function TestTracking({ itemsRef, all_input, selectedPassage, setSelectedPassage
         scrollToId(item.id)
         if (!e.target.className.includes("active")) {
             e.target.classList.add("active")
+        } else {
+            e.target.classList.remove("active")
         }
     }
 
@@ -40,7 +42,7 @@ function TestTracking({ itemsRef, all_input, selectedPassage, setSelectedPassage
                 <h2 className="passage-title">Passage 1</h2>
                 <div className="list-answer">
                     {all_input.map((answerBox, index) => {
-                        return (<span key={index} className='answer-item' onClick={e => handleButtonClick(e, answerBox)}>0{answerBox.id}</span>)
+                        return (<span key={index} className='answer-item' onClick={e => handleButtonClick(e, answerBox)}>{answerBox.id}</span>)
                     })}
                 </div>
 

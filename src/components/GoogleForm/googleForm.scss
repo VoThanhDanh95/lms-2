@@ -1,0 +1,154 @@
+.question-wrapper {
+    --border-bottom-width: 2px;
+    --border-bottom-focusing: var(--border-bottom-width) solid rgb(76, 43, 135);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--body-background-color);
+    min-height: 90vh;
+    padding-bottom: 100px;
+
+    .question-sticky-left {
+        width: 768px;
+        background-color: #e0dada;
+        padding: 24px;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+
+        h2 {
+            margin-bottom: 12px;
+        }
+    }
+
+    .question-container {
+        width: 768px;
+        background-color: #fff;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        transition: box-shadow 0.25s cubic-bezier(0, 0, 0.2, 1);
+        margin-top: 12px;
+        padding: 24px;
+
+        
+        .question-header {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+
+            .question-header--input {
+                flex: 5;
+                background-color: #f8f9fa;
+                input {
+                    padding: 10px;
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                }
+
+                border-bottom: var(--border-bottom-width) solid transparent;
+
+                &:focus-within {
+                    border-bottom: var(--border-bottom-focusing);
+                }
+            }
+
+            .question-header--icon {
+                flex: 1;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .question-header--select {
+                flex: 3;
+                display: flex;
+                align-items: center;
+                height: 48px;
+            }
+        }
+
+        .question-body {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            .question-body--option {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 2px 0px;
+
+                .question-body--option__icon {
+                    margin-right: 10px;
+                    color: #bdbdbd;
+                }
+
+                .question-body--option__input {
+                    flex: 1;
+                    font-weight: 400;
+                    font-size: 11pt;
+                    line-height: normal;
+                    color: #202124;
+                    background-color: transparent;
+                    border: none;
+                    padding: 0.125em 0;
+                }
+
+                .question-body--option__input:hover {
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                    // background-color: rgba(0,0,0,.12);
+                }
+
+                .question-body--option__input:focus {
+                    border-bottom: var(--border-bottom-focusing);
+                }
+            }
+
+            .question-body--option__correct {
+                background-color: #e6f4ea;
+            }
+
+            .question-body--option.question-body--add-more {
+                justify-content: start;
+                input {
+                    // width: fit-content;
+                    flex: none;
+                    align-items: center;
+                    justify-content: start;
+                }
+            }
+        }
+
+        .question-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #dadce0;
+        }
+    }
+}
+
+.question-action-control {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    z-index: 10;
+    // justify-content: center;
+    gap: 40px;
+    background-color: #fff;
+    padding: 0 30px;
+    .question-action-control--icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}

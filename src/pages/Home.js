@@ -1,9 +1,8 @@
 import React from 'react'  
+import JoditExample from '../components/JoditExample'
 function Home() {
     return (
-        <h1>
-            Home Page
-        </h1>
+        <JoditExample />
     )
 }
 
