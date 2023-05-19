@@ -1,14 +1,22 @@
 const fake_answer = [
     {
-        "qid": [1],
-        "answer": ['Yes']
+        "qid": 1,
+        "pid": 1,
+        "answer": "Yes"
     },
     {
-        "qid": [2,3],
-        "answer": ["Medium", "Hard"]
+        "qid": 2,
+        "pid": 1,
+        "answer": "Medium"
     },
     {
-        "qid": [4],
-        "answer": ['Nice']
+        "qid": 3,
+        "pid": 1,
+        "answer": "Hard"
+    },
+    {
+        "qid": 4,
+        "pid": 1,
+        "answer": "nice"
     },
 ]

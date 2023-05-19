@@ -1,11 +1,10 @@
 import './style.scss'
-import JoditExample from "../JoditExample"
+import JoditExample from '../JoditExample'
 import AnswerForm from './AnswerForm'
 
 function TestContent({ itemsRef, passage_content, passage_input }) {
     return (
         <div className="content-wrapper">
-
             <div className="passage-area">
                 <JoditExample
                     init_value={passage_content}
@@ -13,8 +12,8 @@ function TestContent({ itemsRef, passage_content, passage_input }) {
                 />
             </div>
 
-            <div className="passage-answer">
-                <AnswerForm list_question = {passage_input}/>
+            <div className="passage-answer-form">
+                <AnswerForm itemsRef={itemsRef} list_question={passage_input} />
 
                 {/* <ul>
                     {passage_input.map((answerBox, index) => (

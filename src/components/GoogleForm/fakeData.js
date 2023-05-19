@@ -8,13 +8,13 @@ export const SECTION_LIST = [
         "question-list": [
             {
                 "questionText": `Do the following statements agree with the information given in Reading Passage 1?
-
+                <br>
                 In boxes 7-13 on your answer sheet, write
-                
+                <br>
                 TRUE    if    the    statement    agrees    with    the    information
-                
+                <br>
                 FALSE if the statement contradicts the information
-                
+                <br>
                 NOT GIVEN if there is no information on this`,
                 "questionType": "description",
             },
@@ -46,7 +46,7 @@ export const SECTION_LIST = [
                 "questionText": "Write 500 words to show your thinking about NhaCuaDi",
                 "questionType": "text",
                 "answerKey": ["Nice", "nice", "nicee"],
-                "startIndex": 3, // add - calculate after submit form
+                "startIndex": 4, // add - calculate after submit form
                 "numQuestion": 1,
             }
         ]

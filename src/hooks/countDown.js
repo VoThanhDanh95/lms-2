@@ -8,6 +8,10 @@ function useCountDown(totalTime=30) {
             setCountDown(cd => cd - 1)
         }, 1000)
 
+        if (countDown < 0) {
+            clearInterval(interval)
+        }
+
         return () => clearInterval(interval)
     }, [countDown])
 

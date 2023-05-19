@@ -39,14 +39,15 @@
                 overflow-y: scroll;
             }
 
-            .passage-answer {
+            .passage-answer-form {
+                .jodit-container {
+                    border: none;
+                    background-color: transparent;
+                }
                 flex: 1;
                 .session-question-wrapper {
                     .question-content {
-                        .jodit-container {
-                            border: none;
-                            background-color: transparent;
-                        }
+                        
 
                         // .jodit-container:not(.jodit_inline) {
                         //     /* Quy tắc CSS áp dụng cho các phần tử có lớp jodit-container nhưng không có lớp jodit_inline */
@@ -105,3 +106,21 @@
         }
     }
 }
+
+.blink {
+    // border: 1px solid transparent;
+    background-color: transparent;
+    outline: none;
+    animation: border-blink 2s linear;
+}
+
+@keyframes border-blink {
+    0% {
+        background-color: rgb(232, 240, 167);
+    }
+
+    50% {
+        background-color: transparent;
+    }
+}
+

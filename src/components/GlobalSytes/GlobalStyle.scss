@@ -5,7 +5,7 @@
     --black: #000;
     --white: #fff;
     --text-color: #333;
-    
+
     // Default layout
     --default-layout-width: 1150px;
     --default-layout-horizontal-spacer: 24px;
@@ -24,7 +24,9 @@ body {
     line-height: 1.5;
 }
 
-button, input, [tabindex] {
+button,
+input,
+[tabindex] {
     outline: none;
     border: none;
 }
